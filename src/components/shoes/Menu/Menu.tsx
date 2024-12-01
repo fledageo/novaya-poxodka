@@ -27,8 +27,7 @@ export const Menu = ({ isOpen, handleClose }: IProps) => {
 
   return (
     <div
-      className={isOpen ? styles.modal : styles.close} ref={modalRef}>
-      
+      className={`${isOpen ? styles.open : styles.close} ${styles.modal}`} ref={modalRef}>      
     </div>
   );
 };

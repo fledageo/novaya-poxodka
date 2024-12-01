@@ -7,6 +7,7 @@ export const ShoesPage = () => {
     <div className={styles.wrapper}>
         <Header/>
         <Hero/>
+        <div className={styles.ddd}></div>
     </div>
   )
 }

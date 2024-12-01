@@ -11,8 +11,8 @@ export const Header = () => {
   useEffect(() => {
     const handleResize = () => {
       setIsSmall(window.innerWidth < 768)
-      
-      if(window.innerWidth > 768){
+
+      if (window.innerWidth > 768) {
         setIsMenuOpen(false)
       }
 
@@ -20,7 +20,7 @@ export const Header = () => {
 
     window.addEventListener('resize', handleResize)
 
-    return () => window.removeEventListener('resize',handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
 
   const handleOpenMenu = () => {
@@ -53,15 +53,13 @@ export const Header = () => {
                   <a href="">Контакты</a>
                 </li>
               </ul>
-            </nav> 
+            </nav>
             :
-            <div className="">
-              <IoMenu color='#d7ccc8' size={40} onClick={handleOpenMenu}/>
-              <Menu isOpen={isMenuOpen} handleClose={() => setIsMenuOpen(false)}/>
-            </div>
+            <IoMenu color='#d7ccc8' size={30} onClick={handleOpenMenu} />
 
-            
+
         }
+        <Menu isOpen={isMenuOpen} handleClose={() => setIsMenuOpen(false)} />
       </div>
     </header>
   )

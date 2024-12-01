@@ -1,6 +1,6 @@
 @use '../../../../styles/variables.scss' as vars;
 
-.wrapper {
+.background {
     height: 100vh;
     width: 100%;
     position: absolute;
@@ -16,15 +16,17 @@
     width: 100%;
     height: 100%;
     background-color: #4e342ed8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
 }
 
 .hero {
     letter-spacing: 2px;
     text-align: center;
     color: white;
+    margin-top: 100px;
+    height: calc(100vh - 100px);
 }
 
 .hero__content {
@@ -74,13 +76,14 @@
     }
 }
 
+
 @media (max-width:1300px) {
-    .wrapper{
+    .background{
         background-position: left;
     }
 }
 @media (max-width:vars.$large-size) {
-    .wrapper{
+    .background{
         background-image: url('/public/images/hero-bg-medium.jpg');
     }
     .hero__title {
@@ -97,7 +100,7 @@
 }
 
 @media (max-width:vars.$small-size) {
-    .wrapper{
+    .background{
         background-image: url('/public/images/hero-bg-small.jfif');
     }
     .hero__title {
