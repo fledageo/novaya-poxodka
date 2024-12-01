@@ -1,0 +1,93 @@
+@use '../../../../styles/variables.scss' as vars;
+
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background-image: url('/public/images/hero-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.layer {
+    width: 100%;
+    height: 100%;
+    background-color: #4e342ed8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    letter-spacing: 2px;
+    text-align: center;
+    color: white;
+}
+
+.hero__content {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.hero__title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+
+.hero__btn {
+    background: none;
+    color: white;
+    padding: 15px 30px;
+    border: 1px solid vars.$main-color;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-family: 'Montserrat';
+    transition: 0.2s;
+    text-transform: uppercase;
+
+
+    &:hover {
+        background-color: vars.$main-color;
+        color: vars.$dark-color;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width:1300px) {
+    .wrapper{
+        background-position: left;
+    }
+}
+@media (max-width:1000px) {
+    .wrapper{
+        background-image: url('/public/images/hero-bg-small.jpg');
+    }
+    .hero__title {
+        font-size: 2rem;
+    }
+    
+    .hero__subtitle {
+        font-size: 1rem;
+    }
+}

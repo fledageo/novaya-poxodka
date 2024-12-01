@@ -1,0 +1,51 @@
+@use '/src/styles/variables.scss' as vars;
+
+.header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.header__logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo__img {
+    width: 100px;
+}
+
+.menu__list {
+    display: flex;
+    gap: 50px;
+}
+
+.list__item {
+    font-family: "Montserrat";
+    font-weight: 500;
+
+    &>a {
+        color: #d7ccc8;
+        white-space: nowrap;
+    }
+}
+
+
+
+@media (max-width:1000px) {
+    .logo__img {
+        width: 80px;
+    }
+    .list__item {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:600px) {
+   
+    .logo__img {
+        width: 60px;
+    }
+}
