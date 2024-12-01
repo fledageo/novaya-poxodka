@@ -4,15 +4,15 @@ import { IoMenu } from "react-icons/io5";
 import { Menu } from '../Menu/Menu';
 export const Header = () => {
 
-  const [isSmall, setIsSmall] = useState<boolean>(window.innerWidth < 750)
+  const [isSmall, setIsSmall] = useState<boolean>(window.innerWidth < 768)
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmall(window.innerWidth < 750)
+      setIsSmall(window.innerWidth < 768)
       
-      if(window.innerWidth > 750){
+      if(window.innerWidth > 768){
         setIsMenuOpen(false)
       }
 

@@ -34,7 +34,7 @@
 
 
 
-@media (max-width:1000px) {
+@media (max-width:vars.$large-size) {
     .logo__img {
         width: 80px;
     }
@@ -43,7 +43,7 @@
     }
 }
 
-@media (max-width:600px) {
+@media (max-width:vars.$small-size) {
    
     .logo__img {
         width: 60px;

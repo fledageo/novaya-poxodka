@@ -79,9 +79,9 @@
         background-position: left;
     }
 }
-@media (max-width:1000px) {
+@media (max-width:vars.$large-size) {
     .wrapper{
-        background-image: url('/public/images/hero-bg-small.jpg');
+        background-image: url('/public/images/hero-bg-medium.jpg');
     }
     .hero__title {
         font-size: 2rem;
@@ -90,4 +90,25 @@
     .hero__subtitle {
         font-size: 1rem;
     }
+
+    .hero__btn{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width:vars.$small-size) {
+    .wrapper{
+        background-image: url('/public/images/hero-bg-small.jfif');
+    }
+    .hero__title {
+        font-size: 1.8rem;
+    }
+    
+    .hero__subtitle {
+        font-size: 0.9rem;
+    }
+    .hero__btn{
+        font-size: 0.8rem;
+    }
+
 }
